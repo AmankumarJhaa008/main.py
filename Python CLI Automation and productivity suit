@@ -1,0 +1,33 @@
+# =====================================================================
+=====================================================================
+# Description: Central Command Line Interface for Task Management & File Organization
+# =====================================================================
+
+import sys
+from task_manager import run_task_manager
+from file_organizer import run_file_organizer
+
+def main_menu():
+    while True:
+        print("\n" + "="*40)
+        print("  PYTHON CLI AUTOMATION & PRODUCTIVITY SUITE")
+        print("="*40)
+        print("1. Task Manager (CLI)")
+        print("2. Smart File Organizer")
+        print("3. Exit")
+        print("-" * 40)
+        
+        choice = input("Enter your choice (1-3): ").strip()
+        
+        if choice == '1':
+            run_task_manager()
+        elif choice == '2':
+            run_file_organizer()
+        elif choice == '3':
+            print("\nThank you for using Python CLI Suite. Goodbye!")
+            sys.exit()
+        else:
+            print("\n[!] Invalid choice. Please enter 1, 2, or 3.")
+
+if __name__ == "__main__":
+    main_menu()
